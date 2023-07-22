@@ -25,6 +25,100 @@ const Shop = (props) => {
     }
   };
 
+  const getCriteriaBySection = (section) => {
+    if (section == "cpu") {
+      return [
+        {
+          title: "Price",
+          categories: ["$0-$99.99", "$100-$299.99", "$300+"],
+          selectedCategories: [],
+        },
+        {
+          title: "Brand",
+          categories: ["Intel", "AMD"],
+          selectedCategories: [],
+        },
+      ];
+    } else if (section == "motherboard") {
+      return [
+        {
+          title: "Price",
+          categories: ["$0-$99.99", "$100-$299.99", "$300+"],
+          selectedCategories: [],
+        },
+        {
+          title: "Platform",
+          categories: ["Intel", "AMD"],
+          selectedCategories: [],
+        },
+        {
+          title: "Brand",
+          categories: ["ASUS", "MSI"],
+          selectedCategories: [],
+        },
+      ];
+    } else if (section == "powersupply") {
+      return [
+        {
+          title: "Price",
+          categories: ["$0-$49.99", "$50-$99.99", "$100+"],
+          selectedCategories: [],
+        },
+        {
+          title: "Brand",
+          categories: ["Corsair", "Gigabyte"],
+          selectedCategories: [],
+        },
+        {
+          title: "Power",
+          categories: ["550W", "750W", "850W"],
+          selectedCategories: [],
+        },
+      ];
+    } else if (section == "memory") {
+      return [
+        {
+          title: "Price",
+          categories: ["$0-$49.99", "$50-$99.99", "$100+"],
+          selectedCategories: [],
+        },
+        {
+          title: "Brand",
+          categories: ["Corsair", "GSkill"],
+          selectedCategories: [],
+        },
+        {
+          title: "Capacity",
+          categories: ["8GB", "16GB", "32GB"],
+          selectedCategories: [],
+        },
+      ];
+    } else if (section == "fans") {
+      return [
+        {
+          title: "Price",
+          categories: ["$0-$49.99", "$50-$99.99", "$100+"],
+          selectedCategories: [],
+        },
+        {
+          title: "Brand",
+          categories: ["Corsair", "Fractal Design"],
+          selectedCategories: [],
+        },
+      ];
+    } else if (section == "cooling") {
+      return [
+        {
+          title: "Price",
+          categories: ["$0-$49.99", "$50-$99.99", "$100+"],
+          selectedCategories: [],
+        },
+      ];
+    } else {
+      return [{}];
+    }
+  };
+
   const getPath = () => {
     let name = getSectionName(params.section);
 
@@ -84,10 +178,8 @@ const Shop = (props) => {
     } else {
       return (
         <StoreContent
-          criteria={[
-            { title: "Price", categories: ["$1", "$2", "$3"] },
-            { title: "Brand", categories: ["Intel", "AMD"] },
-          ]}
+          criteria={getCriteriaBySection(params.section)}
+          section={params.section}
         />
       );
     }

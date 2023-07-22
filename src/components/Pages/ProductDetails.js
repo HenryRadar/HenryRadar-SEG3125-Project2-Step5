@@ -45,7 +45,7 @@ const ProductDetails = (props) => {
     const paths = [
       { url: "/SEG3125-Project2-Step3/#/shop/home", name: "Shop" },
       path,
-      { url: "", name: "Product Details" },
+      { url: null, name: "Product Details" },
     ];
 
     return paths;

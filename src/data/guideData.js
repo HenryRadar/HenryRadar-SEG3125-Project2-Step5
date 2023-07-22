@@ -6,6 +6,9 @@ const guideData = [
     title: "Guide: How to replace a PSU",
     description: "This guide teaches you how to replace your faulty PSU",
     numSteps: 3,
+    filters: {
+      Topic: "Replacing Parts",
+    },
     steps: [
       {
         stepNumber: 1,
@@ -36,6 +39,9 @@ const guideData = [
     description:
       "This guide teaches you how to install a new hard drive in your computer.",
     numSteps: 2,
+    filters: {
+      Topic: "Part Installation",
+    },
     steps: [
       {
         stepNumber: 1,

@@ -3,20 +3,46 @@ import SearchCriteria from "../SearchCriteria/SearchCriteria";
 import guideData from "../../data/guideData";
 import CustomButton from "../ CustomButton/CustomButton";
 import "../StoreContent/StoreContent.css";
+import { useState } from "react";
 
 const Guides = (props) => {
+  const criteria = [
+    {
+      title: "Topic",
+      categories: [
+        "Getting Started",
+        "Part Installation",
+        "Replacing Parts",
+        "User Guides",
+      ],
+      selectedCategories: [],
+    },
+  ];
+
   const data = guideData;
 
-  const resultNumber = data.length;
+  const [resultNumber, setResultNumber] = useState(data.length);
+  const [selectedFilters, setSelectedFilters] = useState(criteria);
+  const [filteredData, setFilteredData] = useState(data);
 
-  const criteria = {
-    title: "Topic",
-    categories: [
-      "Getting Started",
-      "Part Installation",
-      "Replacing Parts",
-      "User Guides",
-    ],
+  const updateSearchCriteria = (newCriteria) => {
+    const updatedFilters = newCriteria;
+    setSelectedFilters(updatedFilters);
+    updateProducts(updatedFilters);
+  };
+
+  const updateProducts = (updatedFilters) => {
+    let updatedFilteredData = [...data];
+    console.log(updatedFilters);
+
+    if (updatedFilters.selectedCategories.length != 0) {
+      updatedFilteredData = data.filter((guide) =>
+        updatedFilters.selectedCategories.includes(guide.filters.Topic)
+      );
+    }
+
+    setFilteredData(updatedFilteredData);
+    setResultNumber(updatedFilteredData.length);
   };
 
   const getUrl = (id) => {
@@ -31,7 +57,10 @@ const Guides = (props) => {
           <div className="criteria-border d-flex align-items-center flex-item "></div>
 
           <div className="flex-fill">
-            <SearchCriteria content={criteria} />
+            <SearchCriteria
+              content={criteria[0]}
+              updateSearchCriteria={updateSearchCriteria}
+            />
           </div>
           <div className="py-2 px-2 justify-content-center">
             <CustomButton
@@ -47,7 +76,7 @@ const Guides = (props) => {
           <Container>
             <div className="d-flex">
               <div className="flex-fill">
-                {data.map((guide) => (
+                {filteredData.map((guide) => (
                   <div className="flex-item py-1">
                     <a href={getUrl(guide.id)}>{guide.title}</a>
                     <div className="flex-item">{guide.description}</div>
