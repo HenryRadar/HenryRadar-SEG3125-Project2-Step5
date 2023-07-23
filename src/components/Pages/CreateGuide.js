@@ -9,7 +9,7 @@ import "./Create.css";
 const CreateGuide = () => {
   const getPath = () => {
     const paths = [
-      { url: "/SEG3125-Project2-Step3/#/guides", name: "Guides" },
+      { url: "/HenryRadar-SEG3125-Project2-Step5/#/guides", name: "Guides" },
       { url: null, name: "Create Guide" },
     ];
 
@@ -69,7 +69,7 @@ const CreateGuide = () => {
               </div>
               <CustomButton
                 title="Back to Guides"
-                href="/SEG3125-Project2-Step3/#/guides"
+                href="/HenryRadar-SEG3125-Project2-Step5/#/guides"
               />
             </div>
           )}

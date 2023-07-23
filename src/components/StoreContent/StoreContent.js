@@ -45,7 +45,7 @@ const StoreContent = (props) => {
   };
 
   const getUrl = (id) => {
-    return "/SEG3125-Project2-Step3/#/shop/details/" + id;
+    return "/HenryRadar-SEG3125-Project2-Step5/#/shop/details/" + id;
   };
 
   return (

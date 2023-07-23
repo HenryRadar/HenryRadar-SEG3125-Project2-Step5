@@ -35,15 +35,17 @@ const ProductDetails = (props) => {
     let name = getSectionName(product.section);
 
     if (name == "") {
-      return [{ url: "/SEG3125-Project2-Step3/#/shop/home", name: name }];
+      return [
+        { url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/home", name: name },
+      ];
     }
 
     let path = {
-      url: "/SEG3125-Project2-Step3/#/shop/" + product.section,
+      url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/" + product.section,
       name: name,
     };
     const paths = [
-      { url: "/SEG3125-Project2-Step3/#/shop/home", name: "Shop" },
+      { url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/home", name: "Shop" },
       path,
       { url: null, name: "Product Details" },
     ];

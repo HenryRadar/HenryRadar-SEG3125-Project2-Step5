@@ -41,7 +41,7 @@ const MainNavbar = (props) => {
       <Navbar expand="lg" className="navbar">
         <Container>
           <Nav className="d-flex justify-content-start">
-            <Navbar.Brand href="/SEG3125-Project2-Step3/#">
+            <Navbar.Brand href="/HenryRadar-SEG3125-Project2-Step5/#">
               <img
                 src={logo}
                 width="80"
@@ -55,7 +55,7 @@ const MainNavbar = (props) => {
 
           <Nav className="d-flex justify-content-end">
             <Nav.Link
-              href="/SEG3125-Project2-Step3/#/guides"
+              href="/HenryRadar-SEG3125-Project2-Step5/#/guides"
               className="align-center"
             >
               <u>{t("guides")}</u>
@@ -82,24 +82,24 @@ const MainNavbar = (props) => {
         <Container>
           <NavDropdown title={t("shop")} id="shop-dropdown">
             <div className="header">{t("computer parts")}</div>
-            <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/cpu">
+            <NavDropdown.Item href="/HenryRadar-SEG3125-Project2-Step5/#/shop/cpu">
               CPU
             </NavDropdown.Item>
-            <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/motherboard">
+            <NavDropdown.Item href="/HenryRadar-SEG3125-Project2-Step5/#/shop/motherboard">
               {t("motherboard")}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/powersupply">
+            <NavDropdown.Item href="/HenryRadar-SEG3125-Project2-Step5/#/shop/powersupply">
               {t("power supply")}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/memory">
+            <NavDropdown.Item href="/HenryRadar-SEG3125-Project2-Step5/#/shop/memory">
               {t("memory")}
             </NavDropdown.Item>
             <NavDropdown.Divider />
             <div className="header">{t("pc cooling")}</div>
-            <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/fans">
+            <NavDropdown.Item href="/HenryRadar-SEG3125-Project2-Step5/#/shop/fans">
               {t("fans")}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/cooling">
+            <NavDropdown.Item href="/HenryRadar-SEG3125-Project2-Step5/#/shop/cooling">
               {t("liquid cooling")}
             </NavDropdown.Item>
           </NavDropdown>

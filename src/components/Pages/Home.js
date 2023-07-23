@@ -17,13 +17,13 @@ const Home = (props) => {
             <h2>{t("your pc your parts")}</h2>
             <CustomButton
               title={t("shop")}
-              href="/SEG3125-Project2-Step3/#/shop/home"
+              href="/HenryRadar-SEG3125-Project2-Step5/#/shop/home"
             />
             <div className="margin"></div>
             <h2>{t("first pc")}</h2>
             <CustomButton
               title="Guides"
-              href="/SEG3125-Project2-Step3/#/guides"
+              href="/HenryRadar-SEG3125-Project2-Step5/#/guides"
             />
           </div>
 

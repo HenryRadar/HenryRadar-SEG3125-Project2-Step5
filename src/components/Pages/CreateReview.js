@@ -40,18 +40,20 @@ const CreateReview = (props) => {
     let name = getSectionName(product.section);
 
     if (name == "") {
-      return [{ url: "/SEG3125-Project2-Step3/#/shop/home", name: name }];
+      return [
+        { url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/home", name: name },
+      ];
     }
 
     let path = {
-      url: "/SEG3125-Project2-Step3/#/shop/" + product.section,
+      url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/" + product.section,
       name: name,
     };
     const paths = [
-      { url: "/SEG3125-Project2-Step3/#/shop/home", name: "Shop" },
+      { url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/home", name: "Shop" },
       path,
       {
-        url: "/SEG3125-Project2-Step3/#/shop/details/" + product.id,
+        url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/details/" + product.id,
         name: "Product Details",
       },
       { url: null, name: "Review" },
@@ -90,7 +92,10 @@ const CreateReview = (props) => {
               </div>
               <CustomButton
                 title="Back to Product"
-                href={"/SEG3125-Project2-Step3/#/shop/details/" + product.id}
+                href={
+                  "/HenryRadar-SEG3125-Project2-Step5/#/shop/details/" +
+                  product.id
+                }
               />
             </div>
           )}

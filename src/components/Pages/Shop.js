@@ -123,15 +123,17 @@ const Shop = (props) => {
     let name = getSectionName(params.section);
 
     if (name == "Shop") {
-      return [{ url: "/SEG3125-Project2-Step3/#/shop/home", name: name }];
+      return [
+        { url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/home", name: name },
+      ];
     }
 
     let path = {
-      url: "/SEG3125-Project2-Step3/#/shop/" + params.section,
+      url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/" + params.section,
       name: name,
     };
     const paths = [
-      { url: "/SEG3125-Project2-Step3/#/shop/home", name: "Shop" },
+      { url: "/HenryRadar-SEG3125-Project2-Step5/#/shop/home", name: "Shop" },
       path,
     ];
 
@@ -145,30 +147,32 @@ const Shop = (props) => {
           <h5>Computer Parts</h5>
           <ul>
             <li>
-              <a href="/SEG3125-Project2-Step3/#/shop/cpu">CPU</a>
+              <a href="/HenryRadar-SEG3125-Project2-Step5/#/shop/cpu">CPU</a>
             </li>
             <li>
-              <a href="/SEG3125-Project2-Step3/#/shop/motherboard">
+              <a href="/HenryRadar-SEG3125-Project2-Step5/#/shop/motherboard">
                 Motherboard
               </a>
             </li>
             <li>
-              <a href="/SEG3125-Project2-Step3/#/shop/powersupply">
+              <a href="/HenryRadar-SEG3125-Project2-Step5/#/shop/powersupply">
                 Power Supply
               </a>
             </li>
             <li>
-              <a href="/SEG3125-Project2-Step3/#/shop/memory">Memory</a>
+              <a href="/HenryRadar-SEG3125-Project2-Step5/#/shop/memory">
+                Memory
+              </a>
             </li>
           </ul>
           <br />
           <h5>PC Cooling</h5>
           <ul>
             <li>
-              <a href="/SEG3125-Project2-Step3/#/shop/fans">Fans</a>
+              <a href="/HenryRadar-SEG3125-Project2-Step5/#/shop/fans">Fans</a>
             </li>
             <li>
-              <a href="/SEG3125-Project2-Step3/#/shop/cooling">
+              <a href="/HenryRadar-SEG3125-Project2-Step5/#/shop/cooling">
                 Liquid Cooling
               </a>
             </li>
