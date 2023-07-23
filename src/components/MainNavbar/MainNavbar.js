@@ -5,8 +5,37 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./MainNavbar.css";
 import logo from "../../assets/logo.png";
 import cart from "../../assets/cart.svg";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import "../../assets/i18n/i18n";
 
-const MainNavbar = () => {
+const MainNavbar = (props) => {
+  const { t, i18n } = useTranslation();
+
+  const [currentLanguage, setCurrentLanguage] = useState(props.lang);
+
+  const updateLanguage = props.updateLanguage;
+
+  const changeLanguage = () => {
+    if (currentLanguage === "en") {
+      i18n
+        .changeLanguage("fr")
+        .then(() => setCurrentLanguage("fr"))
+        .catch((err) => console.log(err));
+      updateLanguage({
+        lang: "fr",
+      });
+    } else {
+      i18n
+        .changeLanguage("en")
+        .then(() => setCurrentLanguage("en"))
+        .catch((err) => console.log(err));
+      updateLanguage({
+        lang: "en",
+      });
+    }
+  };
+
   return (
     <div>
       <Navbar expand="lg" className="navbar">
@@ -29,10 +58,13 @@ const MainNavbar = () => {
               href="/SEG3125-Project2-Step3/#/guides"
               className="align-center"
             >
-              <u>Guides</u>
+              <u>{t("guides")}</u>
             </Nav.Link>
             <Nav.Link href="">
-              <u>Sign In / Register</u>
+              <u>{t("sign in")}</u>
+            </Nav.Link>
+            <Nav.Link onClick={changeLanguage} className="align-center">
+              <u>{t("language")}</u>
             </Nav.Link>
             <Navbar.Brand href="">
               <img
@@ -48,27 +80,27 @@ const MainNavbar = () => {
       </Navbar>
       <Navbar expand="lg" className="navbar-lower">
         <Container>
-          <NavDropdown title="Shop" id="shop-dropdown">
-            <div className="header">Computer Parts</div>
+          <NavDropdown title={t("shop")} id="shop-dropdown">
+            <div className="header">{t("computer parts")}</div>
             <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/cpu">
               CPU
             </NavDropdown.Item>
             <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/motherboard">
-              Motherboard
+              {t("motherboard")}
             </NavDropdown.Item>
             <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/powersupply">
-              Power Supply
+              {t("power supply")}
             </NavDropdown.Item>
             <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/memory">
-              Memory
+              {t("memory")}
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <div className="header">PC Cooling</div>
+            <div className="header">{t("pc cooling")}</div>
             <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/fans">
-              Fans
+              {t("fans")}
             </NavDropdown.Item>
             <NavDropdown.Item href="/SEG3125-Project2-Step3/#/shop/cooling">
-              Liquid Cooling
+              {t("liquid cooling")}
             </NavDropdown.Item>
           </NavDropdown>
         </Container>

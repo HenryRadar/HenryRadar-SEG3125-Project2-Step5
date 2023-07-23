@@ -8,14 +8,21 @@ import CreateReview from "./components/Pages/CreateReview";
 import Guides from "./components/Pages/Guides";
 import Guide from "./components/Pages/Guide";
 import CreateGuide from "./components/Pages/CreateGuide";
+import { useState } from "react";
 
 function App() {
+  const [currentLanguage, setCurrentLanguage] = useState("en");
+
+  const updateLanguage = (lang) => {
+    setCurrentLanguage(lang);
+  };
+
   return (
     <div>
-      <MainNavbar />
+      <MainNavbar lang={currentLanguage} updateLanguage={updateLanguage} />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home lang={currentLanguage} />} />
         <Route path="/shop/:section" element={<Shop />} />
         <Route path="/shop/details/:id" element={<ProductDetails />} />
         <Route path="/shop/details/review/:id" element={<CreateReview />} />

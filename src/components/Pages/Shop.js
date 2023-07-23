@@ -97,7 +97,7 @@ const Shop = (props) => {
       return [
         {
           title: "Price",
-          categories: ["$0-$49.99", "$50-$99.99", "$100+"],
+          categories: ["$0-$19.99", "$19-$49.99", "$50+"],
           selectedCategories: [],
         },
         {

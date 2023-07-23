@@ -3,12 +3,18 @@ import "./StoreContent.css";
 import SearchCriteria from "../SearchCriteria/SearchCriteria";
 import ProductCard from "../ProductCard/ProductCard";
 import productData from "../../data/productData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const StoreContent = (props) => {
   const sectionData = productData.filter(
     (item) => item.section === props.section
   );
+
+  useEffect(() => {
+    setResultNumber(sectionData.length);
+    setSelectedFilters(props.criteria);
+    setFilteredData(sectionData);
+  }, [props.section]);
 
   const [resultNumber, setResultNumber] = useState(sectionData.length);
   const [selectedFilters, setSelectedFilters] = useState(props.criteria);

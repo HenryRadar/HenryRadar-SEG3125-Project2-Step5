@@ -20,7 +20,7 @@ const Guide = (props) => {
   const getPath = () => {
     const paths = [
       { url: "/SEG3125-Project2-Step3/#/guides", name: "Guides" },
-      { url: "", name: "Guide" },
+      { url: null, name: "Guide" },
     ];
 
     return paths;
@@ -56,7 +56,7 @@ const Guide = (props) => {
             width="500"
             height="400"
             className="flex-item align-right"
-            alt="Product Image"
+            alt="Guide Image"
           />
         </div>
 
