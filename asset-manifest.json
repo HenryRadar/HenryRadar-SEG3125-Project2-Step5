@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/SEG3125-Project2-Step5/static/css/main.bab3a661.css",
+    "main.js": "/SEG3125-Project2-Step5/static/js/main.e825d918.js",
+    "static/js/787.8938dd31.chunk.js": "/SEG3125-Project2-Step5/static/js/787.8938dd31.chunk.js",
+    "static/media/computerImage.webp": "/SEG3125-Project2-Step5/static/media/computerImage.456e4abec3661282d3c6.webp",
+    "static/media/toolBox.jpeg": "/SEG3125-Project2-Step5/static/media/toolBox.1367a6323c6034b2376e.jpeg",
+    "static/media/asusMotherboard.jpeg": "/SEG3125-Project2-Step5/static/media/asusMotherboard.6e380234bbd3756ce897.jpeg",
+    "static/media/msiMotherboard.jpeg": "/SEG3125-Project2-Step5/static/media/msiMotherboard.1828d4f91a069ba51746.jpeg",
+    "static/media/gskillMemory.jpeg": "/SEG3125-Project2-Step5/static/media/gskillMemory.c812db8014116add262e.jpeg",
+    "static/media/amdProcessor.jpeg": "/SEG3125-Project2-Step5/static/media/amdProcessor.4aa8c092ebd7551a1862.jpeg",
+    "static/media/corsairPowersupply.jpeg": "/SEG3125-Project2-Step5/static/media/corsairPowersupply.4afa6058f68bfc490074.jpeg",
+    "static/media/liquidCooling.jpeg": "/SEG3125-Project2-Step5/static/media/liquidCooling.633b0c9fb897c12bc361.jpeg",
+    "static/media/logo.png": "/SEG3125-Project2-Step5/static/media/logo.9262179efab2cb3042dc.png",
+    "static/media/fan.jpeg": "/SEG3125-Project2-Step5/static/media/fan.24b393ec267817d305eb.jpeg",
+    "static/media/guideImage.jpeg": "/SEG3125-Project2-Step5/static/media/guideImage.2e6772461998c6fd4dc5.jpeg",
+    "static/media/intelProcessor.webp": "/SEG3125-Project2-Step5/static/media/intelProcessor.4d046e84ea0856b0ed98.webp",
+    "static/media/cart.svg": "/SEG3125-Project2-Step5/static/media/cart.de9fc04ad44b3b919d59b4a18550e470.svg",
+    "index.html": "/SEG3125-Project2-Step5/index.html",
+    "main.bab3a661.css.map": "/SEG3125-Project2-Step5/static/css/main.bab3a661.css.map",
+    "main.e825d918.js.map": "/SEG3125-Project2-Step5/static/js/main.e825d918.js.map",
+    "787.8938dd31.chunk.js.map": "/SEG3125-Project2-Step5/static/js/787.8938dd31.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bab3a661.css",
+    "static/js/main.e825d918.js"
+  ]
+}
